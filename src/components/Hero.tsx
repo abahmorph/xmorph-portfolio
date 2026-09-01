@@ -108,7 +108,7 @@ export function Hero() {
         {/* RIGHT — signature portrait */}
         <div className="relative z-10">
           <PortraitFlip
-            src="/portrait.png"
+            src={`${import.meta.env.BASE_URL}portrait.png`}
             name={profile.name}
             role={profile.role}
           />
