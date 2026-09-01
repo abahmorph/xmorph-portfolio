@@ -35,7 +35,7 @@ export function Hero() {
             initial={{ opacity: 0, y: reduce ? 0 : 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.18, ease: EASE }}
-            className="mt-7 font-mono text-[11px] uppercase tracking-[0.45em] text-blue-300/70"
+            className="mt-7 font-mono text-[11px] uppercase tracking-[0.45em] text-blue-400/80"
           >
             ABAH MICHAEL XMORPH
           </motion.div>
@@ -70,7 +70,7 @@ export function Hero() {
             <Magnetic>
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:brightness-110"
+                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-800 to-indigo-800 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:brightness-110"
               >
                 Explore My Work
                 <svg
@@ -86,7 +86,9 @@ export function Hero() {
             </Magnetic>
             <Magnetic>
               <a
-                href="#contact"
+                href={profile.links.x}
+                target="_blank"
+                rel="noreferrer noopener"
                 className="inline-flex items-center gap-2 rounded-xl glass px-6 py-3.5 text-sm font-semibold text-slate-200 transition-colors hover:border-white/20 hover:text-white"
               >
                 Let's Build Something
@@ -108,7 +110,7 @@ export function Hero() {
         {/* RIGHT — signature portrait */}
         <div className="relative z-10">
           <PortraitFlip
-            src={`${import.meta.env.BASE_URL}portrait.png`}
+            src={`${import.meta.env.BASE_URL}portrait.jpg`}
             name={profile.name}
             role={profile.role}
           />

@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 md:flex-row">
         <div className="text-center md:text-left">
           <div className="flex items-center justify-center gap-2 md:justify-start">
-            <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-500 text-xs font-extrabold text-white">
+            <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-blue-700 to-indigo-700 text-xs font-extrabold text-white">
               X
             </span>
             <span className="font-extrabold uppercase tracking-[0.18em] text-white">{profile.wordmark}</span>

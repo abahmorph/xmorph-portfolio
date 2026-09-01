@@ -48,10 +48,10 @@ export function Skills() {
               <StaggerItem key={group.label}>
                 <div className="glass group relative overflow-hidden rounded-3xl p-6">
                   {/* corner glow */}
-                  <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-800/20 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   <div className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-gradient-to-br from-blue-500/15 to-violet-500/15 text-blue-200">
+                    <span className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 text-blue-400">
                       {groupIcons[group.icon]}
                     </span>
                     <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.3em] text-slate-300">
@@ -71,8 +71,8 @@ export function Skills() {
                         className={[
                           'rounded-xl px-3.5 py-2 text-sm font-medium transition-all duration-300',
                           activeSkill === skill.name
-                            ? 'border border-blue-400/50 bg-blue-500/15 text-white shadow-glow'
-                            : 'glass-chip text-slate-200 hover:border-blue-400/30 hover:text-white',
+                            ? 'border border-blue-700/50 bg-blue-500/15 text-white shadow-glow'
+                            : 'glass-chip text-slate-200 hover:border-blue-700/30 hover:text-white',
                         ].join(' ')}
                       >
                         {skill.name}
@@ -90,9 +90,9 @@ export function Skills() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 4 }}
                           transition={{ duration: 0.3, ease: EASE }}
-                          className="rounded-xl border border-blue-400/15 bg-blue-500/5 px-4 py-3 text-sm leading-relaxed text-blue-100/85"
+                          className="rounded-xl border border-blue-700/20 bg-blue-900/30 px-4 py-3 text-sm leading-relaxed text-blue-200/90"
                         >
-                          <span className="mr-2 font-mono text-[10px] uppercase tracking-widest text-blue-300/70">
+                          <span className="mr-2 font-mono text-[10px] uppercase tracking-widest text-blue-400/80">
                             Use
                           </span>
                           {activeDesc}

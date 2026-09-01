@@ -17,12 +17,12 @@
   }
 
   ::selection {
-    background: rgba(79, 124, 255, 0.3);
+    background: rgba(30, 64, 175, 0.45);
     color: #fff;
   }
 
   :focus-visible {
-    outline: 2px solid rgba(79, 124, 255, 0.7);
+    outline: 2px solid rgba(30, 64, 175, 0.9);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -76,7 +76,7 @@
   }
 
   .text-gradient-brand {
-    background: linear-gradient(120deg, #60a5fa 0%, #a78bfa 50%, #22d3ee 100%);
+    background: linear-gradient(120deg, #1d4ed8 0%, #5b21b6 40%, #0e7490 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -86,7 +86,7 @@
     position: relative;
     background:
       linear-gradient(#0a0c12, #0a0c12) padding-box,
-      linear-gradient(135deg, rgba(79, 124, 255, 0.5), rgba(139, 92, 246, 0.4), rgba(34, 211, 238, 0.3))
+      linear-gradient(135deg, rgba(30, 64, 175, 0.7), rgba(91, 33, 182, 0.6), rgba(14, 116, 144, 0.5))
         border-box;
     border: 1px solid transparent;
   }

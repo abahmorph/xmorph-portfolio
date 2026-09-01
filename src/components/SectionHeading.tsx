@@ -20,7 +20,7 @@ export function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="mb-4 inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.4em] text-blue-300/70"
+        className="mb-4 inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.4em] text-blue-400/80"
       >
         <span className="h-px w-8 bg-gradient-to-r from-blue-400/60 to-transparent" />
         {eyebrow}

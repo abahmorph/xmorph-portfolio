@@ -24,7 +24,7 @@ export function About() {
                   {aboutHighlights.map((h) => (
                     <span
                       key={h}
-                      className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-blue-400/40 hover:text-white"
+                      className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-blue-700/40 hover:text-white"
                     >
                       {h}
                     </span>
@@ -50,7 +50,7 @@ export function About() {
             {stats.map((s) => (
               <StaggerItem key={s.label} className={s.label.length > 14 ? 'col-span-2' : ''}>
                 <div className="glass group relative h-full overflow-hidden rounded-3xl p-6 transition-transform duration-500 hover:-translate-y-1">
-                  <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-blue-500/10 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-blue-800/20 blur-2xl transition-opacity group-hover:opacity-100" />
                   <motion.div
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}

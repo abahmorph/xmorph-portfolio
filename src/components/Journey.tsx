@@ -36,7 +36,7 @@ export function Journey() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true, margin: '-80px' }}
                     transition={{ duration: 0.5, delay: 0.15, ease: EASE }}
-                    className="absolute left-[11px] top-6 z-10 grid h-[16px] w-[16px] place-items-center rounded-full border border-blue-400/60 bg-ink-900 sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2"
+                    className="absolute left-[11px] top-6 z-10 grid h-[16px] w-[16px] place-items-center rounded-full border border-blue-700/60 bg-ink-900 sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2"
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shadow-glow" />
                   </motion.div>
@@ -48,10 +48,10 @@ export function Journey() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: '-80px' }}
                       transition={{ duration: 0.8, ease: EASE }}
-                      className="glass group rounded-2xl p-6 transition-colors duration-300 hover:border-blue-400/20"
+                      className="glass group rounded-2xl p-6 transition-colors duration-300 hover:border-blue-700/25"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="rounded-lg border border-blue-400/20 bg-blue-500/10 px-2.5 py-1 font-mono text-[10px] font-semibold tracking-[0.25em] text-blue-200">
+                        <span className="rounded-lg border border-blue-700/25 bg-blue-800/20 px-2.5 py-1 font-mono text-[10px] font-semibold tracking-[0.25em] text-blue-400">
                           {item.stage}
                         </span>
                       </div>

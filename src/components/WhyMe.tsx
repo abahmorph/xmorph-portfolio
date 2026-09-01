@@ -41,7 +41,7 @@ export function WhyMe() {
         {whyMe.highlights.map((h) => (
           <StaggerItem key={h.title}>
             <div className="glass group h-full rounded-2xl p-6 text-center transition-transform duration-500 hover:-translate-y-1.5">
-              <div className="mx-auto mb-4 grid h-11 w-11 place-items-center rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/15 to-violet-500/15 text-blue-200">
+              <div className="mx-auto mb-4 grid h-11 w-11 place-items-center rounded-2xl border border-blue-700/25 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 text-blue-400">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3l-7 11h5v7l7-11h-5z" />
                 </svg>

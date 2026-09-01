@@ -12,7 +12,7 @@ export const profile = {
     email: 'mailto:abahmorph@gmail.com',
     github: 'https://github.com/abahmorph',
     linkedin: 'https://www.linkedin.com/in/abahmorph',
-    x: 'https://x.com/abahmorph',
+    x: 'https://x.com/iamxmorph',
   },
   wordmark: 'Xmorph',
 }

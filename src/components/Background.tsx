@@ -87,7 +87,7 @@ export function Background() {
       <div
         className="blob left-[-10%] top-[-5%] h-[55vmax] w-[55vmax]"
         style={{
-          background: 'radial-gradient(circle, rgba(79,124,255,0.16), transparent 65%)',
+          background: 'radial-gradient(circle, rgba(30,64,175,0.30), transparent 65%)',
           animation: 'blob-drift-1 26s ease-in-out infinite',
         }}
       />

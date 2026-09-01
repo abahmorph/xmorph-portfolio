@@ -89,7 +89,7 @@ function MichaelPanel({
         )}
         {/* bottom label strip */}
         <div className="absolute inset-x-0 bottom-0 z-30 rounded-b-[26px] bg-gradient-to-t from-black/80 to-transparent px-6 pb-5 pt-14">
-          <div className="font-mono text-[10px] uppercase tracking-[0.35em] text-blue-300/70">Identity · 01</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.35em] text-blue-400/80">Identity · 01</div>
           <div className="text-xl font-bold text-white">MICHAEL</div>
         </div>
       </div>
@@ -205,7 +205,7 @@ export function PortraitFlip({ src, name, role }: PortraitFlipProps) {
         <motion.div
           className="absolute inset-0 rounded-[40px]"
           style={{
-            background: `radial-gradient(circle at ${glareX.get()}% ${glareY.get()}%, rgba(79,124,255,0.22), rgba(139,92,246,0.10) 45%, transparent 70%)`,
+            background: `radial-gradient(circle at ${glareX.get()}% ${glareY.get()}%, rgba(30,64,175,0.35), rgba(139,92,246,0.10) 45%, transparent 70%)`,
             filter: 'blur(30px)',
           }}
         />
@@ -215,7 +215,7 @@ export function PortraitFlip({ src, name, role }: PortraitFlipProps) {
       <motion.div
         className="pointer-events-none absolute -inset-8 -z-10"
         style={{
-          background: 'radial-gradient(ellipse, rgba(79,124,255,0.10), rgba(139,92,246,0.05) 50%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(30,64,175,0.20), rgba(139,92,246,0.05) 50%, transparent 70%)',
           filter: 'blur(50px)',
         }}
         animate={reduce ? undefined : { x: -12, y: -10 }}
@@ -274,7 +274,7 @@ export function PortraitFlip({ src, name, role }: PortraitFlipProps) {
             className="animate-float-slower glass rounded-xl px-3 py-2.5"
           >
             <div className="font-mono text-[9px] uppercase tracking-[0.25em] text-slate-400">Building</div>
-            <div className="font-mono text-[11px] font-semibold text-blue-200">DIGITAL WORLDS</div>
+            <div className="font-mono text-[11px] font-semibold text-blue-400">DIGITAL WORLDS</div>
           </motion.div>
         </div>
 

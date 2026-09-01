@@ -77,7 +77,7 @@ function ProjectCard({
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
           {/* status badge */}
           <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/10 bg-black/50 px-3 py-1.5 backdrop-blur-md">
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
             <span className="font-mono text-[10px] uppercase tracking-widest text-slate-200">
               {project.status}
             </span>
@@ -111,7 +111,7 @@ function ProjectCard({
 
           <div className="mt-5 flex items-center justify-between border-t border-white/5 pt-4">
             <span className="text-xs font-medium text-slate-500">Role · {project.role}</span>
-            <span className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-blue-300/80 transition-colors group-hover:text-blue-200">
+            <span className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-blue-400 transition-colors group-hover:text-blue-400">
               Open case study
               <svg className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />

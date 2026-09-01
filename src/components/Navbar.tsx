@@ -34,7 +34,7 @@ export function Navbar() {
           ].join(' ')}
         >
           <a href="#home" className="group flex items-center gap-2" aria-label="Xmorph home">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-500 text-sm font-extrabold text-white shadow-glow">
+            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-blue-700 to-indigo-700 text-sm font-extrabold text-white shadow-glow">
               X
             </span>
             <span
@@ -63,8 +63,10 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <Magnetic>
               <a
-                href="#contact"
-                className="hidden rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-glow transition-transform hover:brightness-110 md:inline-flex"
+                href={profile.links.x}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="hidden rounded-xl bg-gradient-to-r from-blue-800 to-indigo-800 px-4 py-2 text-sm font-semibold text-white shadow-glow transition-transform hover:brightness-125 md:inline-flex"
               >
                 Let's Talk
               </a>

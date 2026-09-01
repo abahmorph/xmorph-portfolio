@@ -102,7 +102,7 @@ export function ProjectModal({ id, onClose }: ProjectModalProps) {
                       target="_blank"
                       rel="noreferrer noopener"
                       onClick={(e) => project.demo === '#' && e.preventDefault()}
-                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110"
+                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-800 to-indigo-800 px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110"
                     >
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -133,7 +133,7 @@ export function ProjectModal({ id, onClose }: ProjectModalProps) {
                     transition={{ duration: 0.6, delay: 0.1 + i * 0.08, ease: EASE }}
                   >
                     <div className="mb-2 flex items-center gap-3">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-blue-300/70">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-blue-400/80">
                         {`0${i + 1}`} · {block.label}
                       </span>
                       <span className="h-px flex-1 bg-gradient-to-r from-blue-400/30 to-transparent" />
@@ -149,7 +149,7 @@ export function ProjectModal({ id, onClose }: ProjectModalProps) {
                   transition={{ duration: 0.6, delay: 0.34, ease: EASE }}
                 >
                   <div className="mb-3 flex items-center gap-3">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-blue-300/70">Technology</span>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-blue-400/80">Technology</span>
                     <span className="h-px flex-1 bg-gradient-to-r from-violet-400/30 to-transparent" />
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -168,7 +168,7 @@ export function ProjectModal({ id, onClose }: ProjectModalProps) {
                   transition={{ duration: 0.6, delay: 0.42, ease: EASE }}
                 >
                   <div className="mb-3 flex items-center gap-3">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-blue-300/70">Key Features</span>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-blue-400/80">Key Features</span>
                     <span className="h-px flex-1 bg-gradient-to-r from-cyan-400/30 to-transparent" />
                   </div>
                   <ul className="grid gap-2.5 sm:grid-cols-2">

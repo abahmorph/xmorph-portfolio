@@ -50,13 +50,13 @@ export function Cursor() {
       <motion.div
         ref={dotRef}
         aria-hidden
-        className="pointer-events-none fixed left-0 top-0 z-[100] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-400"
-        style={{ boxShadow: '0 0 12px rgba(79,124,255,0.8)' }}
+        className="pointer-events-none fixed left-0 top-0 z-[100] h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600"
+        style={{ boxShadow: '0 0 12px rgba(30,64,175,0.9)' }}
       />
       <motion.div
         ref={ringRef}
         aria-hidden
-        className="pointer-events-none fixed left-0 top-0 z-[100] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-400/40"
+        className="pointer-events-none fixed left-0 top-0 z-[100] h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-700/40"
         animate={{
           scale: hovering ? 1.8 : 1,
           opacity: hovering ? 0.6 : 1,

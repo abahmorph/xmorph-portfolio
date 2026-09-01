@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { SectionHeading } from './SectionHeading'
 import { Magnetic } from './ui/Magnetic'
@@ -7,6 +6,16 @@ import { profile } from '../data/profile'
 const EASE = [0.16, 1, 0.3, 1] as const
 
 const socials = [
+  {
+    label: 'X (Twitter)',
+    value: '@iamxmorph',
+    href: profile.links.x,
+    icon: (
+      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6-7zm-1.3 19.4h2L6.5 3.3h-2.2l13.3 17.3z" />
+      </svg>
+    ),
+  },
   {
     label: 'Email',
     value: profile.email,
@@ -37,21 +46,9 @@ const socials = [
       </svg>
     ),
   },
-  {
-    label: 'X',
-    value: '@abahmorph',
-    href: profile.links.x,
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 4l7 8m0 0l-7 8m7-8l6-8m-6 8l6 8M11 12L9 4m2 8l2 8" />
-      </svg>
-    ),
-  },
 ]
 
 export function Contact() {
-  const [sent, setSent] = useState(false)
-
   return (
     <section id="contact" className="relative scroll-mt-24 px-6 py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
@@ -76,9 +73,9 @@ export function Contact() {
                   href={s.href}
                   target={s.href.startsWith('http') ? '_blank' : undefined}
                   rel="noreferrer noopener"
-                  className="glass group flex items-center gap-4 rounded-2xl p-4 transition-colors hover:border-blue-400/25"
+                  className="glass group flex items-center gap-4 rounded-2xl p-4 transition-colors hover:border-blue-700/40"
                 >
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-white/10 bg-gradient-to-br from-blue-500/15 to-violet-500/15 text-blue-200 transition-colors group-hover:text-white">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-white/10 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 text-blue-400 transition-colors group-hover:text-white">
                     {s.icon}
                   </span>
                   <span className="min-w-0">
@@ -98,111 +95,77 @@ export function Contact() {
                 <span className="text-sm font-medium text-slate-200">{profile.availability}</span>
               </div>
               <p className="mt-2 text-sm leading-relaxed text-slate-500">
-                Currently open to freelance, remote and collaborative work. I usually respond within a day.
+                Currently open to freelance, remote and collaborative work. Fastest reply is a direct message on X.
               </p>
             </div>
           </motion.div>
 
-          {/* Contact form */}
+          {/* Contact CTA panel */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="glass-strong relative overflow-hidden rounded-3xl p-7 sm:p-9"
+            className="glass-strong relative flex flex-col justify-center overflow-hidden rounded-3xl p-8 sm:p-12"
           >
-            <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-blue-500/10 blur-3xl" />
-            {sent ? (
-              <div className="flex h-full min-h-[320px] flex-col items-center justify-center text-center">
-                <div className="grid h-16 w-16 place-items-center rounded-full bg-emerald-500/15 text-emerald-300">
-                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="mt-5 text-2xl font-bold text-white">Message ready to send</h3>
-                <p className="mt-2 max-w-sm text-slate-400">
-                  Thanks for reaching out. I'll get back to you at {profile.email}.
-                </p>
-              </div>
-            ) : (
-              <form
-                className="space-y-5"
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  setSent(true)
-                }}
-              >
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <label className="block">
-                    <span className="mb-2 block font-mono text-[11px] uppercase tracking-widest text-slate-400">Name</span>
-                    <input
-                      required
-                      type="text"
-                      name="name"
-                      placeholder="Your name"
-                      className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 transition-colors focus:border-blue-400/50 focus:bg-white/[0.07] focus:outline-none"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="mb-2 block font-mono text-[11px] uppercase tracking-widest text-slate-400">Email</span>
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      placeholder="you@example.com"
-                      className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 transition-colors focus:border-blue-400/50 focus:bg-white/[0.07] focus:outline-none"
-                    />
-                  </label>
-                </div>
-                <label className="block">
-                  <span className="mb-2 block font-mono text-[11px] uppercase tracking-widest text-slate-400">Project type</span>
-                  <select
-                    name="type"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200 transition-colors focus:border-blue-400/50 focus:outline-none"
-                    defaultValue=""
-                  >
-                    <option value="" disabled className="bg-ink-900">Select an option</option>
-                    <option className="bg-ink-900">Web application</option>
-                    <option className="bg-ink-900">Website / landing page</option>
-                    <option className="bg-ink-900">Full-stack product</option>
-                    <option className="bg-ink-900">AI / automation</option>
-                    <option className="bg-ink-900">Something else</option>
-                  </select>
-                </label>
-                <label className="block">
-                  <span className="mb-2 block font-mono text-[11px] uppercase tracking-widest text-slate-400">Message</span>
-                  <textarea
-                    required
-                    name="message"
-                    rows={4}
-                    placeholder="Tell me about what you want to build..."
-                    className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 transition-colors focus:border-blue-400/50 focus:bg-white/[0.07] focus:outline-none"
-                  />
-                </label>
+            <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-blue-800/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-indigo-900/20 blur-3xl" />
 
-                <button
-                  type="submit"
-                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:brightness-110"
+            <div className="relative">
+              <div className="font-mono text-[11px] uppercase tracking-[0.35em] text-blue-400/80">Start here</div>
+              <h3 className="mt-3 text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+                Start a conversation
+              </h3>
+              <p className="mt-3 max-w-md leading-relaxed text-slate-400">
+                The fastest way to reach me is a direct message on X. I'm most responsive there —
+                ping{' '}
+                <a
+                  href={profile.links.x}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-blue-400 underline decoration-blue-700/50 underline-offset-4 transition-colors hover:text-white"
                 >
-                  Start a Conversation
-                  <svg
-                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
+                  @iamxmorph
+                </a>{' '}
+                anytime.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Magnetic>
+                  <a
+                    href={profile.links.x}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="group inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-blue-800 to-indigo-800 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all hover:brightness-125"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </button>
-                <p className="text-center text-xs text-slate-600">
-                  Or email me directly at{' '}
-                  <a href={profile.links.email} className="text-blue-300/80 hover:text-blue-200">
-                    {profile.email}
+                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6-7zm-1.3 19.4h2L6.5 3.3h-2.2l13.3 17.3z" />
+                    </svg>
+                    Message me on X
+                    <svg
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </a>
-                </p>
-              </form>
-            )}
+                </Magnetic>
+                <Magnetic>
+                  <a
+                    href={profile.links.email}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-slate-200 transition-colors hover:bg-white/10 hover:text-white"
+                  >
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1zm0 1l8 6 8-6" />
+                    </svg>
+                    Email me
+                  </a>
+                </Magnetic>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

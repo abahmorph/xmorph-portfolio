@@ -11,9 +11,9 @@ export default {
           700: '#131722',
         },
         accent: {
-          blue: '#4f7cff',
-          violet: '#8b5cf6',
-          cyan: '#22d3ee',
+          blue: '#1e40af',
+          violet: '#6d28d9',
+          cyan: '#0e7490',
         },
       },
       fontFamily: {
@@ -22,7 +22,7 @@ export default {
       },
       boxShadow: {
         glass: 'inset 0 1px 0 0 rgba(255,255,255,0.06), 0 8px 32px -12px rgba(0,0,0,0.6)',
-        glow: '0 0 40px -10px rgba(79,124,255,0.45)',
+        glow: '0 0 40px -10px rgba(30,64,175,0.55)',
       },
       backdropBlur: {
         xs: '2px',
